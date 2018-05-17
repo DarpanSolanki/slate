@@ -69,9 +69,9 @@ under the License.
         </div>
         <ul class="search-results"></ul>
       <% end %>
-      <div id="toc" class="toc-list-h1">
+      <div style = "overflow-x: auto !important;" id="toc" class="toc-list-h1">
         <% toc_data(page_content).each do |h1| %>
-          <li>
+          <li style="width: max-content;">
             <a href="#<%= h1[:id] %>" class="toc-h1 toc-link" data-title="<%= h1[:content].to_s.parameterize %>"><%= h1[:content] %></a>
             <% if h1[:children].length > 0 %>
               <ul class="toc-list-h2">
